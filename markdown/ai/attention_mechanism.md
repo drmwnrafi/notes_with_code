@@ -1,6 +1,7 @@
 # Attentions Mechanism
 Attentions mechanism is a pivot of current deep learning models. Its allows the model to capture the relationships of input sequances. 
 ## Additive-Attention
+
 <div style="text-align: center;">
   <table style="margin: 0 auto;">
     <tr>
@@ -37,6 +38,7 @@ a(s_{t-1}, h_i) = \text{v}^T \tanh(\text{W}_h h_i + \text{W}_s s_{t-1})
 ## Group-Query Attention (GQA)
 
 GQA is a combination of multi head and multi query attention with one key and value heads of each sub-groups of query.
+
 <div style="text-align: center;">
   <table style="margin: 0 auto;">
     <tr>
@@ -51,6 +53,7 @@ GQA is a combination of multi head and multi query attention with one key and va
     </tr>
   </table>
 </div>
+
 - **Multi-Head Attention (MHA)** : Every queries head have unique keys and values. Require big memory bandwidth, make it slow when inference. 
 - **Multi-Query Attention (MQA)** : Every queries heads have single keys and values. Less memory bandwidth compare to MHA, but the quality become less and lead instability while training.
 - **Grouped Query Attention (GQA)** : Queries divides to *G* groups. Each group have unique keys and values. Less memory bandwidth than MHA, and better quality than MQA.
